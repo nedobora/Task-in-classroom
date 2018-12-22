@@ -1,0 +1,34 @@
+<a href="https://www.youtube.com/"><button>Youtube</button></a> 
+
+<label for="pseudoBtn" class="btn">Button</label>
+<input type="checkbox" id="pseudoBtn">
+<div class="text">Просто так</div>
+
+<style>
+  
+.text, input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .text {
+  display: block;
+}
+
+
+.btn {
+  margin: 15px;
+  padding: 4px 8px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+}
+</style>
+
+<!-- Схлопывание не срабатывает:
+
+для элементов, у которых установлено свойство padding.
+для элементов, у которых на стороне схлопывания задана граница;
+на элементах с абсолютным позиционированием, т.е. таких, у которых position установлено как absolute;
+на плавающих элементах (для них свойство float задано как left или right);
+для строчных элементов;
+для <html>. -->
